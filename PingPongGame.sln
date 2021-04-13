@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingPongGameWPF", "PingPongGameWPF\PingPongGameWPF.csproj", "{81631830-47C0-4D8A-94E0-4D4E6391ED90}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4BB32B61-BC02-4036-84CD-4DB3ED9DF70F}"
 	ProjectSection(SolutionItems) = preProject
 		D:\Учеба\Курсачелло\Пояснительная Записка.docx = D:\Учеба\Курсачелло\Пояснительная Записка.docx
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{19327C87-9460-4D05-8223-7F71D20BB4A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,10 +16,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{81631830-47C0-4D8A-94E0-4D4E6391ED90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81631830-47C0-4D8A-94E0-4D4E6391ED90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81631830-47C0-4D8A-94E0-4D4E6391ED90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81631830-47C0-4D8A-94E0-4D4E6391ED90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19327C87-9460-4D05-8223-7F71D20BB4A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19327C87-9460-4D05-8223-7F71D20BB4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19327C87-9460-4D05-8223-7F71D20BB4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19327C87-9460-4D05-8223-7F71D20BB4A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
