@@ -46,7 +46,7 @@ namespace WpfApp1
             long ticks = _stopwatch.Elapsed.Ticks;
             _time = (float)ticks / TimeSpan.TicksPerSecond;
             _deltaT = (float)(ticks - _previousTicks) / TimeSpan.TicksPerSecond;
-            _previousTicks = ticks;
+            _previousTicks = ticks; 
             _framesCounter++;
             if (_stopwatch.ElapsedMilliseconds - _previousFPSMeasurementTime >=
     1000)

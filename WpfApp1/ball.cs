@@ -7,12 +7,13 @@ using SharpDX;
 using SharpDX.Direct2D1;
 namespace WpfApp1
 {
-    class Ball
+    class Ball:IDisposable
     {
-		public int PaddleWidth = 100;
-		public float RecoilYMax = 0.5f;
-		public float RecoilXMin = -0.2f;
+		public int PaddleWidth = 10;
+		public float RecoilYMax = 0.2f;
+		public float RecoilXMin = -0.1f;
 		public float RecoilXMax = 0.1f;
+		float speedBuster = 0.03f;
 		public float positionX;
 		public float positionY;
 		public float speedX;
@@ -24,7 +25,7 @@ namespace WpfApp1
 		}
 
 
-		void Reset()
+		public void Reset()
 		{
 			// Sets an initial ball position and speed. X is fixed, Y is random
 			Random randomY = new Random();
@@ -32,54 +33,58 @@ namespace WpfApp1
 			positionX = 100;
 			positionY = randomY.Next(1, 600);// Find resilution 
 
-			speedX = 300;
-			speedY = 200;
+			speedX = 200;
+			speedY = randomY.Next(1, 300);
 		}
-
-		void Initialize(RenderTarget RenderTarget)
-		{
-			SolidColorBrush ballBrush = new SolidColorBrush(RenderTarget, Color.Yellow);
-			// Initializes Direct2D red brush for drawing
-			
-		}
-
-		void Advance(float elapsedTime)
+		
+		
+		public void Advance()
 		{
 			// Logic of the ball movement. If it hits the upper or lower walls it bounces back
-			positionX += speedX * elapsedTime;
-			positionY += speedY * elapsedTime;
+			positionX += speedX * speedBuster;
+			positionY += speedY * speedBuster;
 
-			if (positionY >  - 10)
+			if (positionY >= 565)
+			{
 				speedY = -Math.Abs(speedY);
-			if (positionY < 10)
+
+			}
+
+			if (positionY <= 10)
+			{
+
 				speedY = Math.Abs(speedY);
+			}
+
 		}
 
-		void CheckHitLeftPaddle(float paddleY)
+		public void CheckHitLeftPaddle(float paddleY)
 		{
 			// Checks if the ball hits the left paddle. If it does, it bounces back
-			if (positionX < 20 && speedX < 0)
+			if (positionX < 30 && speedX < 0)
 			{
-				if (positionY > paddleY - PaddleWidth / 2 && positionY < paddleY + PaddleWidth/ 2)
+
+				if (positionY > paddleY - 10 && positionY < paddleY + 110)
 				{
 					// We don't simply want to reverse the x speed. In order to make the game more interesting, we change the X and Y speeds based on where on the paddle the ball hita
-					float paddleHitPos = (positionY - paddleY) / (PaddleWidth / 2);
-					speedX =  Math.Abs(speedX + speedX * (1 - Math.Abs(paddleHitPos)) * RecoilXMax - Math.Abs(speedX * paddleHitPos * RecoilXMin));
+					float paddleHitPos = (positionY - paddleY) / 50;
+					speedX = Math.Abs(speedX + speedX * (1 - Math.Abs(paddleHitPos)) * RecoilXMax - Math.Abs(speedX * paddleHitPos * RecoilXMin));
 					speedY = speedY + Math.Abs(speedY) * paddleHitPos * RecoilYMax;
 					return;
 				}
 			}
 		}
 
-		void CheckHitRightPaddle(float paddleY)
+		public void CheckHitRightPaddle(float paddleY)
 		{
 			// Checks if the ball hits the right paddle. If it does, it bounces back
-			if (positionX > 800 - 20 && speedX > 0)
+			if (positionX >=  760 && speedX > 0)
 			{
-				if (positionY > paddleY - PaddleWidth / 2 && positionY < paddleY + PaddleWidth / 2)
+				
+				if (positionY > paddleY-10 && positionY < paddleY + 110)
 				{
 					// We don't simply want to reverse the x speed. In order to make the game more interesting, we change the X and Y speeds based on where on the paddle the ball hita
-					float paddleHitPos = (positionY - paddleY) / (PaddleWidth / 2);
+					float paddleHitPos = (positionY - paddleY) / 50;
 					speedX = -Math.Abs(speedX + speedX * (1 - Math.Abs(paddleHitPos)) * RecoilXMax - Math.Abs(speedX * paddleHitPos * RecoilXMin));
 					speedY = speedY + Math.Abs(speedY) * paddleHitPos * RecoilYMax;
 					return;
@@ -87,25 +92,27 @@ namespace WpfApp1
 			}
 		}
 
-		bool IsOutsideLeft()
+		public bool IsOutsideLeft()
 		{
 			// Returns true if the ball is outside the play area on the left side
 			return positionX < 0;
 		}
 
-		bool IsOutsideRight()
+		public bool IsOutsideRight()
 		{
 			// Returns true if the ball is outside the play area on the right side
 			return positionX > 800;
 		}
-
-		public void Draw(RenderTarget RenderTarget)
-		{
-			// Draws the ball using Direct2D
-			SharpDX.Mathematics.Interop.RawVector2 mainPos = new SharpDX.Mathematics.Interop.RawVector2(positionX, positionY);
-			SharpDX.Direct2D1.Ellipse ellipseBall = new Ellipse(mainPos, 10, 10);
-			SolidColorBrush yellowBrush = new SolidColorBrush(RenderTarget, Color.Yellow);
-			RenderTarget.FillEllipse(ellipseBall, yellowBrush);
+		public void Dispose()
+        {
+			this.Dispose();
+        }
+		public void Bust()
+        {
+			speedX *= 1.01f;
+			speedY *= 1.01f;
 		}
+
 	}
+
 }

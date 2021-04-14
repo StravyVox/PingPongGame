@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,28 +33,26 @@ namespace WpfApp1
         }
         public class ClsSharpDXSampleBase
         {
-            RenderForm window;
-           
-            public void Render()
-            {
-               
-            }
+            RenderForm _window;
+            MainEngine Engine;
             public ClsSharpDXSampleBase()  
             {
-                window = new RenderForm("Ping Pong");
-                
+                _window = new RenderForm("Pong");
+                _window.Width = 800;
+                _window.Height = 600;
+                _window.AllowUserResizing = false;
+                Engine = new MainEngine(_window);
             }
+            
+                
             public void RenderCallback()
             {
-                Graphics renderGraphics = new Graphics();
-                renderGraphics.Initialize(window);
-                while (true)
-                {
-
-                }
+                Engine.Logic();
+                Engine.FrameDraw();
+             
             }
             public void Run(){
-                RenderLoop.Run(window, RenderCallback);
+                RenderLoop.Run(_window, RenderCallback);
             }
         }
           

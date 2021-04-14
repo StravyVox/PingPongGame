@@ -13,7 +13,7 @@ using SharpDX.Windows;
 
 namespace WpfApp1
 {
-    class Graphics:SharpDX.Windows.RenderForm
+    class Graphics:IDisposable
     {
         SharpDX.Direct2D1.RenderTarget _renderTarget = null;
         SharpDX.Direct2D1.Factory _Factory = null;
@@ -22,7 +22,7 @@ namespace WpfApp1
             if (_Factory!=null) _Factory.Dispose();
             if (_renderTarget != null) _renderTarget.Dispose();
         }
-        public bool Initialize(RenderForm mainform)
+        public void Initialize(RenderForm mainform)
         {
             _Factory = new Factory(FactoryType.SingleThreaded);
             HwndRenderTargetProperties n = new HwndRenderTargetProperties();
@@ -31,7 +31,7 @@ namespace WpfApp1
             n.PixelSize = new Size2 (mainform.ClientSize.Width,mainform.ClientSize.Height);
             RenderTargetProperties nn = new RenderTargetProperties();
             _renderTarget = new WindowRenderTarget(_Factory, nn, n);
-            return false;
+            
         }
         public void BeginDraw()
         {
@@ -45,10 +45,31 @@ namespace WpfApp1
         {
             _renderTarget.Clear(new Color4(r, g, b, 0.1f));
         } 
-        public void DrawBall()
+        public void DrawBall(Ball mainBall)
         {
-            Ball mainBall = new Ball();
-            mainBall.Draw(_renderTarget);
+                // Draws the ball using Direct2D
+
+                SharpDX.Mathematics.Interop.RawVector2 mainPos = new SharpDX.Mathematics.Interop.RawVector2(mainBall.positionX,mainBall.positionY);
+                SharpDX.Direct2D1.Ellipse ellipseBall = new Ellipse(mainPos, 10, 10);
+                SharpDX.Direct2D1.SolidColorBrush yellowBrush = new SharpDX.Direct2D1.SolidColorBrush(_renderTarget, SharpDX.Color.Yellow);
+                 _renderTarget.FillEllipse(ellipseBall, yellowBrush);
+
+            
+        }
+        public void DrawPaddle(Paddle paddle )
+        {
+            SharpDX.RectangleF rectangle1 = new SharpDX.RectangleF(
+                paddle.positionX, paddle.positionY,
+                paddle.PaddleWidth, paddle.PaddleHeight);
+            SharpDX.Direct2D1.SolidColorBrush orangeBrush = new SharpDX.Direct2D1.SolidColorBrush(_renderTarget, SharpDX.Color.Red);
+            _renderTarget.FillRectangle(rectangle1, orangeBrush);
+
+        }
+        public void Dispose()
+        {
+            _renderTarget.Dispose();
+            _Factory.Dispose();
+           
         }
     }
 }
