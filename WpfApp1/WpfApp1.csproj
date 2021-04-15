@@ -83,8 +83,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ball.cs" />
-    <Compile Include="FPSCounter.cs" />
-    <Compile Include="Graphics.cs" />
+    <Compile Include="ControlersWorking.cs" />
+    <Compile Include="FrameDrawer.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="GameWindow.cs" />
+    <Compile Include="GraphicEngine.cs" />
+    <Compile Include="Logic.cs" />
     <Compile Include="MainEngine.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

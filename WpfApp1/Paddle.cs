@@ -6,20 +6,14 @@ using System.Threading.Tasks;
 
 namespace WpfApp1
 {
-    class Paddle
+    class Paddle:GameObject
     {
-		public float positionX;
-		public float positionY;
 		int resolutionY = 800;
 		int score;
 		public int PaddleWidth = 20;
 		public int PaddleHeight = 100;
-		public Paddle(float xPos, float yPos)
+		public Paddle(float positionX, float positionY) : base(positionX, positionY)
 		{
-			// Initializes the position of the paddle with a fixed X position and Y being at the middle of the screen
-			positionX = xPos;
-			positionY = yPos;
-
 			score = 0;
 		}
 		public void MoveToPosition(int yPos)

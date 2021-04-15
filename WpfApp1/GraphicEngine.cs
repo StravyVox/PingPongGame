@@ -13,11 +13,12 @@ using SharpDX.Windows;
 
 namespace WpfApp1
 {
-    class Graphics:IDisposable
+
+    class GraphicEngine:IDisposable
     {
         SharpDX.Direct2D1.RenderTarget _renderTarget = null;
         SharpDX.Direct2D1.Factory _Factory = null;
-        public Graphics()
+        public GraphicEngine()
         {
             if (_Factory!=null) _Factory.Dispose();
             if (_renderTarget != null) _renderTarget.Dispose();
@@ -31,7 +32,6 @@ namespace WpfApp1
             n.PixelSize = new Size2 (mainform.ClientSize.Width,mainform.ClientSize.Height);
             RenderTargetProperties nn = new RenderTargetProperties();
             _renderTarget = new WindowRenderTarget(_Factory, nn, n);
-            
         }
         public void BeginDraw()
         {
@@ -47,14 +47,10 @@ namespace WpfApp1
         } 
         public void DrawBall(Ball mainBall)
         {
-                // Draws the ball using Direct2D
-
                 SharpDX.Mathematics.Interop.RawVector2 mainPos = new SharpDX.Mathematics.Interop.RawVector2(mainBall.positionX,mainBall.positionY);
                 SharpDX.Direct2D1.Ellipse ellipseBall = new Ellipse(mainPos, 10, 10);
                 SharpDX.Direct2D1.SolidColorBrush yellowBrush = new SharpDX.Direct2D1.SolidColorBrush(_renderTarget, SharpDX.Color.Yellow);
                  _renderTarget.FillEllipse(ellipseBall, yellowBrush);
-
-            
         }
         public void DrawPaddle(Paddle paddle )
         {

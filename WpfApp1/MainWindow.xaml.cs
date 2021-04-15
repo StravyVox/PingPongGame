@@ -28,33 +28,10 @@ namespace WpfApp1
     {
         public MainWindow()
         {
-            ClsSharpDXSampleBase form = new ClsSharpDXSampleBase();
-            form.Run();
+            Game PingPongGame = new Game();
+            PingPongGame.Run();
         }
-        public class ClsSharpDXSampleBase
-        {
-            RenderForm _window;
-            MainEngine Engine;
-            public ClsSharpDXSampleBase()  
-            {
-                _window = new RenderForm("Pong");
-                _window.Width = 800;
-                _window.Height = 600;
-                _window.AllowUserResizing = false;
-                Engine = new MainEngine(_window);
-            }
-            
-                
-            public void RenderCallback()
-            {
-                Engine.Logic();
-                Engine.FrameDraw();
-             
-            }
-            public void Run(){
-                RenderLoop.Run(_window, RenderCallback);
-            }
-        }
+       
           
     }
 }

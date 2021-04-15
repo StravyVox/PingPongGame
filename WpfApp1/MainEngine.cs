@@ -15,86 +15,44 @@ namespace WpfApp1
         Ball _mainBall;
         Paddle _frstPaddle;
         Paddle _scndPaddle;
-        Graphics _GraphicEngine;
+        FrameDrawer _FrameDrawer;
         RenderForm _mainWindowGame;
-        bool _playing;
+        Logic _GameLogic;
         public MainEngine(RenderForm mainForm)
         {
             _mainBall = new Ball();
-            _GraphicEngine = new Graphics();
             _frstPaddle = new Paddle(765,300);
             _scndPaddle = new Paddle(0,300);
+
             _mainWindowGame = mainForm;
-            _playing = true;
-            _GraphicEngine.Initialize(_mainWindowGame);
-
+            _FrameDrawer = new FrameDrawer(mainForm, _mainBall, _frstPaddle, _scndPaddle);
+            _GameLogic = new Logic(_mainBall, _frstPaddle, _scndPaddle);
+            _mainWindowGame = mainForm;
         }
-
         private void Restart()
         {
             _mainBall = new Ball();
             _frstPaddle = new Paddle(765,300);
             _scndPaddle = new Paddle(0,300);
-            _playing = true;
-
+            
+            _GameLogic = new Logic(_mainBall, _frstPaddle, _scndPaddle);
+            _FrameDrawer = new FrameDrawer(_mainWindowGame, _mainBall, _frstPaddle, _scndPaddle);
         }
         public void Logic()
         {
-            if (_playing == true)
+            if (_GameLogic._GameIsPlaying == true)
             {
-                
-                _mainBall.Advance();
-
-                _frstPaddle.MoveToPosition((int)Ypos());
-
-                _scndPaddle.MoveToPosition((int)Ypos());
-
-                if (Keyboard.IsKeyDown(Key.Space) == true)
-                {
-                    _mainBall.Bust();
-                }
-
-                _mainBall.CheckHitRightPaddle(_frstPaddle.positionY);
-                _mainBall.CheckHitLeftPaddle(_scndPaddle.positionY);
-                if (_mainBall.IsOutsideLeft())
-                {
-                    _playing = false;
-                    _scndPaddle.IncreaseScore();
-                }
-                if (_mainBall.IsOutsideRight())
-                {
-                    _playing = false;
-                    _frstPaddle.IncreaseScore();
-                }
+                _GameLogic.GameLogic();
             }
-            else
-            {
-                Restart();
-            }
+            else Restart();
         }
         public void FrameDraw()
         {
-            
-            _GraphicEngine.BeginDraw();
-            _GraphicEngine.ClearScreen(0.2f, 0.4f, 0.5f);
-            _GraphicEngine.DrawBall(_mainBall);
-            _GraphicEngine.DrawPaddle(_scndPaddle);
-            _GraphicEngine.DrawPaddle(_frstPaddle);
-            _GraphicEngine.EndDraw();
+            _FrameDrawer.FrameDraw();
         }
-        public void Reset()
-        {
-            _mainBall.Reset();
-        }
-        public float Ypos()
-        {
-            
-            return System.Windows.Forms.Cursor.Position.Y;
-        }
- 
         public void Dispose()
         {
-            _GraphicEngine.Dispose();
+            _FrameDrawer.Dispose();
         }
     }
 

@@ -7,18 +7,16 @@ using SharpDX;
 using SharpDX.Direct2D1;
 namespace WpfApp1
 {
-    class Ball:IDisposable
+    class Ball:GameObject, IDisposable
     {
 		public int PaddleWidth = 10;
 		public float RecoilYMax = 0.2f;
 		public float RecoilXMin = -0.1f;
 		public float RecoilXMax = 0.1f;
 		float speedBuster = 0.03f;
-		public float positionX;
-		public float positionY;
 		public float speedX;
 		public float speedY;
-		public Ball() 
+		public Ball() :base()
 		{
 			// Initial ball position and speed
 			this.Reset();
