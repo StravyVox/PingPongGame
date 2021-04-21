@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SharpDX;
 using SharpDX.WIC;
-using SharpDX.Direct2D1;
-using SharpDX.IO;
-using SharpDX.DXGI;
-using SharpDX.Mathematics.Interop;
 namespace PingPongGraphicsClassLibrary
 {
     class SpriteSheet:IDisposable

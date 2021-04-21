@@ -16,8 +16,8 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Game MainGame = new Game();
+             this.Close();
             MainGame.Run();
-            this.Close();
         }
     }
 }

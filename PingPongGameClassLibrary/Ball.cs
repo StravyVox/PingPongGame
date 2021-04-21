@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SharpDX;
-using SharpDX.Direct2D1;
 namespace PingPongGameClassLibrary
 {
     public class Ball:GameObject, IDisposable
@@ -24,7 +18,7 @@ namespace PingPongGameClassLibrary
 		{
 
 			Random randomY = new Random();
-			_spriteFileName = @"D:\Downloads\ball.png";
+			_spriteFileName = @"Textures\ball.png";
 			_positionX = 100;
 			_positionY = randomY.Next(1, 600);// Find resilution 
 

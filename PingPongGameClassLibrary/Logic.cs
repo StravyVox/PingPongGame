@@ -23,8 +23,8 @@ namespace PingPongGameClassLibrary
             ObjectsList = ObjList;
             ObjectsList.Add(new Background());
             ObjectsList.Add(new Ball());
-            ObjectsList.Add(new Paddle(765, 300));
-            ObjectsList.Add(new Paddle(0, 300, @"D:\Downloads\platform1.png"));
+            ObjectsList.Add(new Paddle(765, 300,@"Textures\platform.png"));
+            ObjectsList.Add(new Paddle(0, 300, @"Textures\platform1.png"));
             _mainBall = (Ball)ObjectsList[1];
             _frstPaddle = (Paddle)ObjectsList[2];
             _scndPaddle = (Paddle)ObjectsList[3];

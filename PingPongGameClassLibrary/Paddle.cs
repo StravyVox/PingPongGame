@@ -11,7 +11,7 @@ namespace PingPongGameClassLibrary
 		int score;
 		public int PaddleWidth;
 		public int PaddleHeight;
-		public Paddle(float positionX, float positionY, string texturefile = @"D:\Downloads\platform.png", int Paddlewidth = 20, int Paddleheight = 100) : base(positionX, positionY, texturefile)
+		public Paddle(float positionX, float positionY, string texturefile = @"Textures\platform.png", int Paddlewidth = 20, int Paddleheight = 100) : base(positionX, positionY, texturefile)
 		{
 			score = 0;
 			PaddleWidth = Paddlewidth;

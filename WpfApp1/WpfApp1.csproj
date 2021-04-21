@@ -115,11 +115,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="football.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\PingPongGameClassLibrary\PingPongGameClassLibrary.csproj">
       <Project>{d5e8fbe5-4696-49e7-be75-b31067bf1073}</Project>
       <Name>PingPongGameClassLibrary</Name>

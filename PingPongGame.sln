@@ -14,12 +14,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingPongGraphicsClassLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingPongGameClassLibrary", "PingPongGameClassLibrary\PingPongGameClassLibrary.csproj", "{D5E8FBE5-4696-49E7-BE75-B31067BF1073}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Textures", "Textures", "{27DB518C-4B3A-45D8-A38E-80DF12B815D2}"
-	ProjectSection(SolutionItems) = preProject
-		WpfApp1\football.png = WpfApp1\football.png
-		D:\Downloads\platform.png = D:\Downloads\platform.png
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

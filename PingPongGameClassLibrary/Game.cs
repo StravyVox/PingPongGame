@@ -1,8 +1,4 @@
-﻿using System;
-using SharpDX.Windows;
-using SharpDX.Direct3D;
-using SharpDX.Direct2D1;
-using SharpDX;
+﻿using SharpDX.Windows;
 namespace PingPongGameClassLibrary
 {
     public class Game
