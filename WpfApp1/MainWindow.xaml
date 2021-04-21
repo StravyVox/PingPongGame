@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="ИГРАТЬ" HorizontalAlignment="Left" Margin="279,319,0,0" VerticalAlignment="Top" Width="229" Height="57" Click="Button_Click" Panel.ZIndex="2" BorderBrush="White" Foreground="White" Background="#FF191919" IsDefault="True" FontSize="36"/>
+        <Image Source="thumb-1920-590325.jpg" Stretch="Fill" Panel.ZIndex="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="277,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Panel.ZIndex="2" Height="81" Width="362" Foreground="White" Text="PING PONG" FontFamily="Yu Gothic Light" FontSize="48"/>
+
     </Grid>
 </Window>

@@ -10,6 +10,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{19327C87-9460-4D05-8223-7F71D20BB4A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingPongGraphicsClassLibrary", "PingPongGraphicsClassLibrary\PingPongGraphicsClassLibrary.csproj", "{DB3D9605-54E0-4405-9653-44EFA71E6D24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingPongGameClassLibrary", "PingPongGameClassLibrary\PingPongGameClassLibrary.csproj", "{D5E8FBE5-4696-49E7-BE75-B31067BF1073}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Textures", "Textures", "{27DB518C-4B3A-45D8-A38E-80DF12B815D2}"
+	ProjectSection(SolutionItems) = preProject
+		WpfApp1\football.png = WpfApp1\football.png
+		D:\Downloads\platform.png = D:\Downloads\platform.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +30,14 @@ Global
 		{19327C87-9460-4D05-8223-7F71D20BB4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19327C87-9460-4D05-8223-7F71D20BB4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19327C87-9460-4D05-8223-7F71D20BB4A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB3D9605-54E0-4405-9653-44EFA71E6D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3D9605-54E0-4405-9653-44EFA71E6D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3D9605-54E0-4405-9653-44EFA71E6D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3D9605-54E0-4405-9653-44EFA71E6D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E8FBE5-4696-49E7-BE75-B31067BF1073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E8FBE5-4696-49E7-BE75-B31067BF1073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E8FBE5-4696-49E7-BE75-B31067BF1073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E8FBE5-4696-49E7-BE75-B31067BF1073}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

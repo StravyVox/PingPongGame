@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SharpDX.Windows;
 using SharpDX.Direct3D;
 using SharpDX.Direct2D1;
 using SharpDX;
-namespace WpfApp1
+namespace PingPongGameClassLibrary
 {
-    class Game
+    public class Game
     {
         GameWindow _mainGameWindow;
         MainEngine Engine;
@@ -18,7 +14,7 @@ namespace WpfApp1
             _mainGameWindow = new GameWindow(800, 600);
             Engine = new MainEngine(_mainGameWindow.Window);
         }
-        public void RenderCallback()
+        private void RenderCallback()
         {
             Engine.Logic();
             Engine.FrameDraw();

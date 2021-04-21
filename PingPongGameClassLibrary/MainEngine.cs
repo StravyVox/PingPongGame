@@ -8,35 +8,28 @@ using SharpDX;
 using SharpDX.Direct2D1;
 using SharpDX.Windows;
 using System.Windows.Input;
-namespace WpfApp1
+using PingPongGraphicsClassLibrary;
+namespace PingPongGameClassLibrary
 {
     class MainEngine:IDisposable
     {
-        Ball _mainBall;
-        Paddle _frstPaddle;
-        Paddle _scndPaddle;
-        FrameDrawer _FrameDrawer;
+        ObjectsMassWorker ObjectsList;
         RenderForm _mainWindowGame;
         Logic _GameLogic;
+        FrameDrawer _FrameDrawer;
         public MainEngine(RenderForm mainForm)
         {
-            _mainBall = new Ball();
-            _frstPaddle = new Paddle(765,300);
-            _scndPaddle = new Paddle(0,300);
-
+            ObjectsList = new ObjectsMassWorker();
             _mainWindowGame = mainForm;
-            _FrameDrawer = new FrameDrawer(mainForm, _mainBall, _frstPaddle, _scndPaddle);
-            _GameLogic = new Logic(_mainBall, _frstPaddle, _scndPaddle);
+            _FrameDrawer = new FrameDrawer(_mainWindowGame);
+            _GameLogic = new Logic(_mainWindowGame, ObjectsList);
             _mainWindowGame = mainForm;
         }
         private void Restart()
         {
-            _mainBall = new Ball();
-            _frstPaddle = new Paddle(765,300);
-            _scndPaddle = new Paddle(0,300);
-            
-            _GameLogic = new Logic(_mainBall, _frstPaddle, _scndPaddle);
-            _FrameDrawer = new FrameDrawer(_mainWindowGame, _mainBall, _frstPaddle, _scndPaddle);
+            ObjectsList = new ObjectsMassWorker();
+            _FrameDrawer = new FrameDrawer(_mainWindowGame);
+            _GameLogic = new Logic(_mainWindowGame,ObjectsList);
         }
         public void Logic()
         {
@@ -48,7 +41,7 @@ namespace WpfApp1
         }
         public void FrameDraw()
         {
-            _FrameDrawer.FrameDraw();
+            _FrameDrawer.FrameDraw(ObjectsList.ReturnSpritesMass(), ObjectsList.ReturnPositionX(), ObjectsList.ReturnPositionY());
         }
         public void Dispose()
         {

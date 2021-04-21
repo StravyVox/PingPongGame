@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SharpDX.Windows;
-using SharpDX.Direct3D;
-using SharpDX.Direct2D1;
-namespace WpfApp1
+namespace PingPongGameClassLibrary
 {
     class GameWindow
     {
         RenderForm _window;
         public GameWindow(int Width, int Height)
         {
-            _window = new RenderForm("Pong");
+            _window = new RenderForm("Ping Pong");
             _window.Width = Width;
             _window.Height = Height;
             _window.AllowUserResizing = false;
