@@ -57,6 +57,9 @@ namespace PingPongModuleTests
             _BallToTest.FrameLogic(800);
             Assert.AreEqual(150+(100*0.03f), _BallToTest.Xpos);
         }
+        /// <summary>
+        /// Defines the test method TestCheckHitLeft.
+        /// </summary>
         [TestMethod]
         public void TestCheckHitLeft()
         {
@@ -78,6 +81,9 @@ namespace PingPongModuleTests
                 Assert.IsTrue(result);
             }
         }
+        /// <summary>
+        /// Defines the test method TestCheckHitRight.
+        /// </summary>
         [TestMethod]
         public void TestCheckHitRight()
         {
@@ -99,12 +105,18 @@ namespace PingPongModuleTests
                 Assert.IsTrue(result);
             }
         }
+        /// <summary>
+        /// Defines the test method TestReset.
+        /// </summary>
         [TestMethod]
         public void TestReset()
         {
             _BallToTest.Reset();
             Assert.AreEqual(100, _BallToTest.Xpos);
         }
+        /// <summary>
+        /// Defines the test method TestResetWithPlayer.
+        /// </summary>
         [TestMethod]
         public void TestResetWithPlayer()
         {

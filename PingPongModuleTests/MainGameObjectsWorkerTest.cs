@@ -36,6 +36,9 @@ namespace PingPongModuleTests
             Assert.AreEqual(lengthfrst-1,GOWorkerToTest.Length());
 
         }
+        /// <summary>
+        /// Defines the test method TestBoxesAdd.
+        /// </summary>
         [TestMethod]
         public void TestBoxesAdd()
         {
@@ -58,6 +61,9 @@ namespace PingPongModuleTests
             }
 
         }
+        /// <summary>
+        /// Defines the test method TestBoxesGet.
+        /// </summary>
         [TestMethod]
         public void TestBoxesGet()
         {

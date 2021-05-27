@@ -6,9 +6,15 @@ using PingPongGraphicsClassLibrary;
 using PingPongGameClassLibrary;
 namespace PingPongModuleTests
 {
+    /// <summary>
+    /// Defines test class SpriteSheetTest.
+    /// </summary>
     [TestClass]
     public class SpriteSheetTest
     {
+        /// <summary>
+        /// Defines the test method TestReturnBitmap.
+        /// </summary>
         [TestMethod]
         public void TestReturnBitmap()
         {
@@ -30,7 +36,10 @@ namespace PingPongModuleTests
                 Assert.IsTrue(resultOfWorking);
             }
         }
-      
+
+        /// <summary>
+        /// Defines the test method TestGetFilename.
+        /// </summary>
         [TestMethod]
         public void TestGetFilename()
         {
@@ -40,6 +49,9 @@ namespace PingPongModuleTests
             SpriteSheet spriterToTest = new SpriteSheet(BallToDo.Sprite, GDToTest);
             Assert.IsNotNull(spriterToTest.Filename);
         }
+        /// <summary>
+        /// Defines the test method TestDispose.
+        /// </summary>
         [TestMethod]
         public void TestDispose()
         {

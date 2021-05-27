@@ -23,6 +23,9 @@ namespace PingPongModuleTests
             Assert.AreEqual(gmToTest.Scale, TestWorker[0].Scale);
 
         }
+        /// <summary>
+        /// Defines the test method TestObjectsMassWorkerList.
+        /// </summary>
         [TestMethod]
         public void TestObjectsMassWorkerList()
         {
@@ -33,6 +36,9 @@ namespace PingPongModuleTests
             Assert.AreEqual(1, TestWorker.ReturnAFullList().Count);
 
         }
+        /// <summary>
+        /// Defines the test method TestObjectsMassWorkerListConstruct.
+        /// </summary>
         [TestMethod]
         public void TestObjectsMassWorkerListConstruct()
         {

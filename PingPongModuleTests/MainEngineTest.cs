@@ -4,9 +4,15 @@ using PingPongGameClassLibrary;
 using SharpDX.Windows;
 namespace PingPongModuleTests
 {
+    /// <summary>
+    /// Defines test class MainEngineTest.
+    /// </summary>
     [TestClass]
     public class MainEngineTest
     {
+        /// <summary>
+        /// Defines the test method TestMainEngineStartLogic.
+        /// </summary>
         [TestMethod]
         public void TestMainEngineStartLogic()
         {
@@ -26,6 +32,9 @@ namespace PingPongModuleTests
                 Assert.IsTrue(resultOfWorking);
             }
         }
+        /// <summary>
+        /// Defines the test method TestMainEngineStartFrameDraw.
+        /// </summary>
         [TestMethod]
         public void TestMainEngineStartFrameDraw()
         {
@@ -45,6 +54,9 @@ namespace PingPongModuleTests
                 Assert.IsTrue(resultOfWorking);
             }
         }
+        /// <summary>
+        /// Defines the test method TestMainEngineDispose.
+        /// </summary>
         [TestMethod]
         public void TestMainEngineDispose()
         {
@@ -64,6 +76,9 @@ namespace PingPongModuleTests
                 Assert.IsTrue(resultOfWorking);
             }
         }
+        /// <summary>
+        /// Defines the test method TestMainEngineRestart.
+        /// </summary>
         [TestMethod]
         public void TestMainEngineRestart()
         {

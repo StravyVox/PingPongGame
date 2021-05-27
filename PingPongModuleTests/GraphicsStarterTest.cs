@@ -24,6 +24,9 @@ namespace PingPongModuleTests
             GFToTest.Initialize(rform);
             Assert.AreEqual(factoryToTest.GetType(), GFToTest.BaseFactory.GetType());
         }
+        /// <summary>
+        /// Defines the test method TestGraphicsStarterDispose.
+        /// </summary>
         [TestMethod]
         public void TestGraphicsStarterDispose()
         {
@@ -44,6 +47,9 @@ namespace PingPongModuleTests
                 Assert.IsTrue(resultOfWorking);
             }
         }
+        /// <summary>
+        /// Defines the test method TestGraphicsStarterConstruct.
+        /// </summary>
         [TestMethod]
         public void TestGraphicsStarterConstruct()
         {
@@ -63,6 +69,9 @@ namespace PingPongModuleTests
                 Assert.IsTrue(resultOfWorking);
             }
         }
+        /// <summary>
+        /// Defines the test method TestGraphicsGetterDirectFactory.
+        /// </summary>
         [TestMethod]
         public void TestGraphicsGetterDirectFactory()
         {
@@ -71,6 +80,9 @@ namespace PingPongModuleTests
             bool resultOfWorking = true;
             Assert.IsNotNull(GFToTest.DirectFactory);
         }
+        /// <summary>
+        /// Defines the test method TestGraphicsGetterBaseFactory.
+        /// </summary>
         [TestMethod]
         public void TestGraphicsGetterBaseFactory()
         {
