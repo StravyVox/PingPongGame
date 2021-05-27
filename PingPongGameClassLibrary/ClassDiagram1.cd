@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PingPongGameClassLibrary.BonusMaker" Collapsed="true">
+    <Position X="25.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAABCAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\BonusMaker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameLogic" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.ControlersChecker" Collapsed="true">
+    <Position X="28.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\ControlersChecker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameLogic" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.DecoratorWorker" Collapsed="true">
+    <Position X="28.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Engine\DecoratorWorker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameLogic" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.Game" Collapsed="true">
+    <Position X="20.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAABAAAAAAAAAI=</HashCode>
+      <FileName>Engine\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.GameLogic" Collapsed="true">
+    <Position X="25.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAFCAgAAAgIAEAAQAAAQAAAAABEEEBAACAA=</HashCode>
+      <FileName>Engine\GameLogic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainEngine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.GameWindow" Collapsed="true">
+    <Position X="20.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Engine\GameWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.MainEngine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAAAAAQCAAAAAAIAAACAAAAAgAAAAAACAEAAAAAAA=</HashCode>
+      <FileName>Engine\MainEngine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Game" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.215" Collapsed="true" />
+  </Class>
+  <Class Name="PingPongGameClassLibrary.MainGameObjectsWorker" Collapsed="true">
+    <Position X="23" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAABAADACAABAAAAAwBAEAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Engine\MainGameObjectsWorker.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainEngine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.ObjectsMassWorker" Collapsed="true">
+    <Position X="23" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIAAAAAAAAIAACAAAAABAAIABAAAACAAAAAEAABA=</HashCode>
+      <FileName>Engine\ObjectsMassWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.Background" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\BackGround.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.Ball" Collapsed="true">
+    <Position X="14.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAADABAAAACAAAhAAAEAAAMABAABAAJAAA=</HashCode>
+      <FileName>GameObjects\Ball.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.BallDecorator" Collapsed="true">
+    <Position X="14.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>GameObjects\BallDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.BigPaddleBonusBox" Collapsed="true">
+    <Position X="8.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\BigPaddleBonusBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.BigPaddleCreator">
+    <Position X="23.75" Y="9.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\BigPaddleCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.BigPaddleDecorator" Collapsed="true">
+    <Position X="19" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\BigPaddleDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.BonusBox" Collapsed="true">
+    <Position X="10.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>GameObjects\BonusBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.BonusBoxCreator">
+    <Position X="26" Y="11" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\BonusBoxCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.FirstPlayer" Collapsed="true">
+    <Position X="21.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\FirstPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.GameObject" Collapsed="true">
+    <Position X="18" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAQAAAACAAAAAIAIAAAAAAABAAAAQAAAAAAAAgQA=</HashCode>
+      <FileName>GameObjects\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainGameObjectsWorker" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.Paddle" Collapsed="true">
+    <Position X="18" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAABAAAAggAAAAAAEAAgAAAQAABAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\Paddle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.PaddleDecorator" Collapsed="true">
+    <Position X="18" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>GameObjects\PaddleDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.SecondPlayer" Collapsed="true">
+    <Position X="19.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\SecondPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.SmallPaddleBonusBox" Collapsed="true">
+    <Position X="13.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\SmallPaddleBonusBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.SmallPaddleCreator">
+    <Position X="28.25" Y="9.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\SmallPaddleCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.SmallPaddleDecorator" Collapsed="true">
+    <Position X="16.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\SmallPaddleDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.SpeedBallBonusBox" Collapsed="true">
+    <Position X="11.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\SpeedBallBonusBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.SpeedBallCreator">
+    <Position X="26" Y="9.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\SpeedBallCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGameClassLibrary.SpeedBallDecorator" Collapsed="true">
+    <Position X="14.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\SpeedBallDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGraphicsClassLibrary.FrameDrawer" Collapsed="true">
+    <Position X="21" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

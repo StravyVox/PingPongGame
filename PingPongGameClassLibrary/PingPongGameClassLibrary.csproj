@@ -67,19 +67,38 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackGround.cs" />
-    <Compile Include="Ball.cs" />
-    <Compile Include="ControlersChecker.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="GameObject.cs" />
-    <Compile Include="GameWindow.cs" />
-    <Compile Include="Logic.cs" />
-    <Compile Include="MainEngine.cs" />
-    <Compile Include="ObjectsMassWorker.cs" />
-    <Compile Include="Paddle.cs" />
+    <Compile Include="Engine\BonusMaker.cs" />
+    <Compile Include="Engine\DecoratorWorker.cs" />
+    <Compile Include="Engine\MainGameObjectsWorker.cs" />
+    <Compile Include="GameObjects\BackGround.cs" />
+    <Compile Include="GameObjects\Ball.cs" />
+    <Compile Include="Engine\ControlersChecker.cs" />
+    <Compile Include="Engine\Game.cs" />
+    <Compile Include="GameObjects\BallDecorator.cs" />
+    <Compile Include="GameObjects\BigPaddleDecorator.cs" />
+    <Compile Include="GameObjects\BigPaddleBonusBox.cs" />
+    <Compile Include="GameObjects\BonusBox.cs" />
+    <Compile Include="GameObjects\SecondPlayer.cs" />
+    <Compile Include="GameObjects\FirstPlayer.cs" />
+    <Compile Include="GameObjects\PaddleDecorator.cs" />
+    <Compile Include="GameObjects\SmallPaddleBonusBox.cs" />
+    <Compile Include="GameObjects\SmallPaddleCreator.cs" />
+    <Compile Include="GameObjects\SmallPaddleDecorator.cs" />
+    <Compile Include="GameObjects\SpeedBallBonusBox.cs" />
+    <Compile Include="GameObjects\BigPaddleCreator.cs" />
+    <Compile Include="GameObjects\BonusBoxCreator.cs" />
+    <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="Engine\GameWindow.cs" />
+    <Compile Include="Engine\GameLogic.cs" />
+    <Compile Include="Engine\MainEngine.cs" />
+    <Compile Include="Engine\ObjectsMassWorker.cs" />
+    <Compile Include="GameObjects\Paddle.cs" />
+    <Compile Include="GameObjects\SpeedBallCreator.cs" />
+    <Compile Include="GameObjects\SpeedBallDecorator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +120,10 @@
     <Content Include="Textures\platform1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\box.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

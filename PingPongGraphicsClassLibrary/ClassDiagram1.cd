@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PingPongGraphicsClassLibrary.FrameDrawer" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAABgAAAAAAAAgAAAAA=</HashCode>
+      <FileName>FrameDrawer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PingPongGraphicsClassLibrary.GraphicsDrawer" Collapsed="true">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAEAAAAAQAAABAAAAAAAAAAAAAAEAAAAAAAI=</HashCode>
+      <FileName>GraphicsDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PingPongGraphicsClassLibrary.GraphicStarter" Collapsed="true">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIAAQACACAQAAAAAAAAGAFAAAAAAABAgAAAEAAAA=</HashCode>
+      <FileName>GraphicStarter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FrameDrawer" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PingPongGraphicsClassLibrary.SpriteSheet" Collapsed="true">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAAAAABACAAQAQAAAIAAAAAAAAAAAAAIAAIAAAAQIA=</HashCode>
+      <FileName>SpriteSheet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FrameDrawer" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
