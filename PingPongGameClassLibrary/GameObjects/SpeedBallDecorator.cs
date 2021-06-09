@@ -19,8 +19,8 @@ namespace PingPongGameClassLibrary
         /// <param name="BallToDecorate">The ball to decorate.</param>
         public SpeedBallDecorator(Ball BallToDecorate) : base(BallToDecorate)
         {
-            Ball.SpeedX *= 2;
-            Ball.SpeedY *= 2;
+            BallToDecorate.SpeedX *= 2;
+            BallToDecorate.SpeedY *= 2;
         }
 
         

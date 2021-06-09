@@ -11,7 +11,7 @@ namespace PingPongGameClassLibrary
         /// <summary>
         /// The recoil y maximum
         /// </summary>
-        private float RecoilYMax = 0.2f;
+        private float RecoilYMax = 0.5f;
         /// <summary>
         /// The recoil x minimum
         /// </summary>
